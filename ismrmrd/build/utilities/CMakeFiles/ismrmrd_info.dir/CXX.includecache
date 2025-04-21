@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/server/home/bli/ismrmrd/utilities/ismrmrd_info.cpp
+iostream
+-
+ismrmrd/version.h
+/server/home/bli/ismrmrd/utilities/ismrmrd/version.h
+
+include/ismrmrd/version.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -std=c++11 -Werror -O3 -DNDEBUG  -rdynamic CMakeFiles/ismrmrd_read_timing_test.dir/read_timing_test.cpp.o  -o ismrmrd_read_timing_test  -Wl,-rpath,/server/home/bli/ismrmrd/build:/usr/lib/x86_64-linux-gnu/hdf5/serial: ../libismrmrd.so.1.13.5 /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so -lpthread -lsz -lz -ldl -lm -lpugixml 
