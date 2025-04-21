@@ -1,4 +1,4 @@
-# Hexagonal Sampling for Accelerated SEMAC in 0.55T
+# Hexagonal Sampling for Accelerated SEMAC at 0.55T
 
 This repository contains the code and datasets for
 **"Acceleration of SEMAC at 0.55T using hexagonal sampling"**, by Bahadir Alp Barlas, Kubra Keskin, Bochao Li, Brian A. Hargreaves, and Krishna S. Nayak.
