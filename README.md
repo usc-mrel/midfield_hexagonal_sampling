@@ -1,114 +1,108 @@
-# lowfield_maxgirf
+# Hexagonal Sampling for Accelerated SEMAC in 0.55T
 
 This repository contains the code and datasets for
-**"MaxGIRF: Image Reconstruction Incorporating Concomitant Field and Gradient Impulse Response Function Effects"**, by Nam G. Lee, Rajiv Ramasawmy, Yongwan Lim, Adrienne E. Campbell-Washburn, and Krishna S. Nayak.
+**"Acceleration of SEMAC at 0.55T using hexagonal sampling"**, by Bahadir Alp Barlas, Kubra Keskin, Bochao Li, Brian A. Hargreaves, and Krishna S. Nayak.
 
-Nam Gyun Lee, University of Southern California, Dec 2021.
+Bahadir Alp Barlas, University of Southern California, April 2025.
 
 ## ISMRMRD datasets
-Example human and phantom datasets can be found on Zenodo:
+Human and phantom datasets can be found on Zenodo:
 
-- Human: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5830910.svg)](https://doi.org/10.5281/zenodo.5830910)
-- Phantom: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-
-* **Axial Cartesian spin-echo dataset**
-  - meas_MID00273_FID03656_se_15b130_tra.h5
-  - noise_meas_MID00273_FID03656_se_15b130_tra.h5
-
-* **Axial spiral spin-echo dataset** 
-  - meas_MID00275_FID03658_se_spiral_1102_ax_s24.h5
-  - noise_meas_MID00275_FID03658_se_spiral_1102_ax_s24.h5
-
-* **Axial Cartesian GRE datasets for static off-resonance map estimation**
-
-  - meas_MID00276_FID03659_gre_TE1.h5
-  - meas_MID00277_FID03660_gre_TE2.h5
-  - meas_MID00278_FID03661_gre_TE3.h5
-  - meas_MID00279_FID03662_gre_TE4.h5
-  - meas_MID00280_FID03663_gre_TE5.h5
-  - noise_meas_MID00276_FID03659_gre_TE1.h5
-  - noise_meas_MID00276_FID03660_gre_TE2.h5
-  - noise_meas_MID00276_FID03661_gre_TE3.h5
-  - noise_meas_MID00276_FID03662_gre_TE4.h5
-  - noise_meas_MID00276_FID03663_gre_TE5.h5
-
-* **Sagittal Cartesian spin-echo dataset**
-  - meas_MID00258_FID03641_se_15b130.h5
-  - noise_meas_MID00258_FID03641_se_15b130.h5
+- Phantom Hip: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
+- Phantom Spine: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
+- In Vivo Hip: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
+- In Vivo Spine 1: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
+- In Vivo Spine 2: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
+- In Vivo Spine 3: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
   
-* **Sagittal spiral spin-echo dataset**
-  - meas_MID00260_FID03643_se_spiral_1102_sag_s24.h5
-  - noise_meas_MID00260_FID03643_se_spiral_1102_sag_s24.h5
-  
-* **Sagittal Cartesian GRE datasets for static off-resonance map estimation**
-  - meas_MID00261_FID03644_gre_TE1.h5
-  - meas_MID00262_FID03645_gre_TE2.h5
-  - meas_MID00263_FID03646_gre_TE3.h5
-  - meas_MID00264_FID03647_gre_TE4.h5
-  - meas_MID00265_FID03648_gre_TE5.h5
-  - noise_meas_MID00261_FID03644_gre_TE1.h5
-  - noise_meas_MID00261_FID03645_gre_TE2.h5
-  - noise_meas_MID00261_FID03646_gre_TE3.h5
-  - noise_meas_MID00261_FID03647_gre_TE4.h5
-  - noise_meas_MID00261_FID03648_gre_TE5.h5
 
-* **Mat files containing a static off-resonance map obtained with [NLINV estimation](https://github.com/usc-mrel/nlinv_estimation)**
-  - B0map_nlinv_min1.0e-06_axial.mat
-  - B0map_nlinv_min1.0e-06_sagittal_ro0.mat (ro := remove oversampling: 1=yes, 0=no)
-  - B0map_nlinv_min1.0e-06_sagittal_ro1.mat
-
-Once datasets are downloaded, organize datasets in this structure:
+* **Phantom Hip**
+  Folder name: hip_phantom
+  - meas_MID00086_FID12781_pd_hip_cor_semac16_FOV280_p2.h5
+  - noise_meas_MID00086_FID12781_pd_hip_cor_semac16_FOV280_p2.h5
  
-     |---path-to-dataset (e.g., D:\lowfield\NHLBI\data\20201102_NV_brain)
-         |---meas_MID00260_FID03643_se_spiral_1102_sag_s24.h5
-         |---meas_MID00275_FID03658_se_spiral_1102_ax_s24.h5
-         |---noise_meas_MID00260_FID03643_se_spiral_1102_sag_s24.h5
-         |---noise_meas_MID00275_FID03658_se_spiral_1102_ax_s24.h5
-         |---B0map_nlinv_min1.0e-06_axial.mat
-         |---B0map_nlinv_min1.0e-06_sagittal_ro0.mat
-         |---B0map_nlinv_min1.0e-06_sagittal_ro1.mat
-
-## Figure 3 (numerical simulation)
-
-Update variables `src_directory` and `mida_directory` in `figure3\demo_2d_spiral_simulation.m`.
-
-    src_directory = 'path-to-this-package';
-    mida_directory = 'path-to-this-package\thirdparty\MIDA_v1.0\MIDA_v1_voxels';
+* **Phantom Spine**
+  Folder name: spine_phantom
+  - meas_MID00380_FID13479_pd_spine_cor_semac12_FOV320_p2.h5
+  - noise_meas_MID00380_FID13479_pd_spine_cor_semac12_FOV320_p2.h5
  
-Run `figure3\demo_batch_2d_spiral_simulation.m`
+* **In Vivo Hip**
+  Folder name: Invivo_hip
+  - meas_MID00228_FID58568_pd_tse_cor_bw401_SEMAC12.h5
+  - noise_meas_MID00228_FID58568_pd_tse_cor_bw401_SEMAC12.h5
 
-Run `figure3\demo_generate_figure3.m` to generate Figure 3.
+* **In Vivo Spine 1**
+  Folder name: vol0958_Spine
+  - meas_MID00580_FID21999_t2_tse_tra_SEMAC6_bw401_os50_pr75_etl16_TR3900_p2.h5
+  - noise_meas_MID00580_FID21999_t2_tse_tra_SEMAC6_bw401_os50_pr75_etl16_TR3900_p2.h5
  
-## Figures 5 and 6 (human axial spiral spin-echo imaging)
+* **In Vivo Spine 2**
+  Folder name: vol1095_Spine
+  - meas_MID00857_FID09954_t2_semac_ax_bw401_os50_RL.h5
+  - noise_meas_MID00857_FID09954_t2_semac_ax_bw401_os50_RL.h5
+ 
+* **In Vivo Spine 3**
+  Folder name: vol1106_Spine
+  - meas_MID00777_FID11019_t2_semac8_ax_bw401_p2_os50_RL.h5
+  - noise_meas_MID00777_FID11019_t2_semac8_ax_bw401_p2_os50_RL.h5
+ 
 
-Update variables in `demo_non_cartesian_recon_human_axial.m`.
+Once datasets are downloaded, add the folders in the folder "MR_data".
 
-    src_directory          = 'path-to-this-package';
-    ismrmrd_directory      = 'path-to-ISMRMRD-package';
-    ismrmrd_noise_fullpath = 'path-to-dataset\noise_meas_MID00275_FID03658_se_spiral_1102_ax_s24.h5';
-    ismrmrd_data_fullpath  = 'path-to-dataset\meas_MID00275_FID03658_se_spiral_1102_ax_s24.h5';
-    siemens_dat_fullpath   = 'path-to-dataset\meas_MID00275_FID03658_se_spiral_1102_ax_s24.dat';
-    B0map_fullpath         = 'path-to-dataset\B0map_nlinv_min1.0e-06_axial.mat';
+To obtain the figures in the paper, open the file "main_file.m". Choose the dataset in the section "Choose Dataset" in the code and then simply run the code to obtain the figures for the chosen dataset. The figures and their corresponding datasets are noted below.
 
-Run `demo_non_cartesian_recon_human_axial.m`.
+ 
 
-Run `demo_cartesian_recon_SE_axial.m`.
+## Figure 2 and S3 (Evaluation in a Hip-Implant Phantom)
 
-Run `figure5\demo_generate_figure5.m` and `figure6\demo_generate_figure6.m` to generate Figures 5 and 6, respectively.
+In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "hip_phantom".
 
-## Figures 7 and 8 (human sagittal spiral spin-echo imaging)
+Uncomment the dataset "hip_phantom" in "Choose Dataset" section.
 
-Update variables in `demo_non_cartesian_recon_human_sagittal.m`.
+Run "main_file.m".
 
-    src_directory          = 'path-to-this-package';
-    ismrmrd_directory      = 'path-to-ISMRMRD-package';
-    ismrmrd_noise_fullpath = 'path-to-dataset\noise_meas_MID00260_FID03643_se_spiral_1102_sag_s24.h5';
-    ismrmrd_data_fullpath  = 'path-to-dataset\meas_MID00260_FID03643_se_spiral_1102_sag_s24.h5';
-    siemens_dat_fullpath   = 'path-to-dataset\meas_MID00260_FID03643_se_spiral_1102_sag_s24.dat';
-    B0map_fullpath         = 'path-to-dataset\B0map_nlinv_min1.0e-06_sagittal_ro0.mat';
 
-Run `demo_non_cartesian_recon_human_sagittal.m`.
+## Figure 3 and S2 (Evaluation in a Spine-Implant Phantom)
 
-Run `demo_cartesian_recon_SE_sagittal.m`.
+In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "spine_phantom".
 
-Run `figure7\demo_generate_figure7.m` and `figure8\demo_generate_figure8.m` to generate Figures 7 and 8, respectively.
+Uncomment the dataset "spine_phantom" in "Choose Dataset" section.
+
+Run "main_file.m".
+
+
+## Figure 4 and S4 (In vivo evaluation in a patient with Total Hip Replacement)
+
+In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "Invivo_hip".
+
+Uncomment the dataset "Invivo_hip" in "Choose Dataset" section.
+
+Run "main_file.m".
+
+
+## Figure 5 and S5 (In vivo evaluation in a patient with Transforaminal Lumbar Interbody Fusion)
+
+In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "vol0958_Spine".
+
+Uncomment the dataset "vol0958_Spine" in "Choose Dataset" section.
+
+Run "main_file.m".
+
+
+## Figure S6 and S7 (In vivo evaluation in a patient with anterior lumbar interbody fusion)
+
+In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "vol1095_Spine".
+
+Uncomment the dataset "vol1095_Spine" in "Choose Dataset" section.
+
+Run "main_file.m".
+
+
+## Figure S8 and S9 (In vivo evaluation in a patient with transforaminal lumbar interbody fusion)
+
+In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "vol1106_Spine".
+
+Uncomment the dataset "vol1106_Spine" in "Choose Dataset" section.
+
+Run "main_file.m".
+
