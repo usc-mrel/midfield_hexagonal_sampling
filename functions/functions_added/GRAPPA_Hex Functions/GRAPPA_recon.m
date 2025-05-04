@@ -1,4 +1,16 @@
 function recon_Mu = GRAPPA_recon(Mu,kernel,kernel_matrix)
+%   Interpolation step for 3D GRAPPA Reconstruction
+%   Input:
+%       - k-space data: Mu (Nx x Ny x Nz x Nslice x Ncoil)
+%       - Kernel for 3D GRAPPA recon: kernel (3 x 3 x 3)
+%       - Mask for 3D kernel: kernel_matrix (3 x 3 x 3)
+%
+%   Output:
+%       - Interpolated k-space data: recon_Mu (Nx x Ny x Nz x Nslice x Ncoil)
+%
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 kersize = size(kernel_matrix);
 hex_param = 0;
 pat = abs(Mu)>0; pat = sum(pat,4); pat = abs(pat)>0;
