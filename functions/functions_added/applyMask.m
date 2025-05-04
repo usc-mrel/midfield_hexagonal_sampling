@@ -1,5 +1,16 @@
 %% Apply Masks to Data
 function masked_data = applyMask(images,mask_type)
+%   Apply mask for removing replicas in hexagonally sampled data
+%   Input:
+%       - image data: images (Nx x Ny x Nz x Nslice x Ncoil)
+%       - Mask Type: mask_type (See 'generateMask' function)
+%
+%   Output:
+%       - Masked image data: masked_data (Nx x Ny x Nz x Nslice x Ncoil)
+%
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 opt = 0;
 masked_data = images;
 [Nx,Ny,Nz,Nslice,Ncoil] = size(images);
