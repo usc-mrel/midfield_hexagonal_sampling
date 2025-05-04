@@ -1,3 +1,12 @@
+%%  Hexagonal Sampling
+%   The main file for "Acceleration of SEMAC at 0.55T using hexagonal sampling" paper
+%   Choose the dataset from "Choose Dataset" section by commenting all
+%   other datasets except the chosen one. Then, simply run the code. For
+%   detailed instruction see the README file in the Github respitory.
+
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 clear all;
 close all;
 clc;
