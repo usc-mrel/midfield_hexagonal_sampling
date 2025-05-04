@@ -1,4 +1,17 @@
 function mask = generateMask(Ny,Nz,mask_type,opt)
+%   Generate mask for removing replicas in hexagonally sampled data
+%   Input:
+%       - # of pixels in y-direction: Ny
+%       - # of SEMAC spectral bins: Nz
+%       - Mask Type: mask_type (See section titles below)
+%       - Show Mask Option: opt
+%
+%   Output:
+%       - Mask: mask (Ny x Nz)
+%
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 addReplicas = 0;
 
 %% Cross Regular
