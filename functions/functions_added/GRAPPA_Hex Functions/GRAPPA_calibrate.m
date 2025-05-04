@@ -1,4 +1,15 @@
 function kernel = GRAPPA_calibrate(MCalib,kernel_matrix,lambda)
+%   Learn the kernel for 3D GRAPPA recon using calibration data
+%   Input:
+%       - Calibration Data: MCalib (Nx x Ny_Calib x 1 x Nslice x Ncoil)
+%       - Mask for 3D Kernel: kernel_matrix (3 x 3 x 3)
+%
+%   Output:
+%       - kernel for 3D GRAPPA recon: kernel (3 x 3 x 3)
+%
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 [Nx, Ny, Nz, Nc] = size(MCalib);
 pat = abs(MCalib)>0; pat = sum(pat,4); pat = abs(pat)>0;
 kersize = size(kernel_matrix);
