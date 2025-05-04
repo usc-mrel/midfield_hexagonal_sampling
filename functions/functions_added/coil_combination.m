@@ -1,4 +1,15 @@
 function images = coil_combinations(kdata,type)
+%   Combine coil images
+%   Input:
+%       - k-space data: kdata (Nx x Ny x Nz x Nslice x Ncoil)
+%       - How to combine coil images: type ('walsh' or 'sos')
+%
+%   Output:
+%       - Coil combined images: images (Nx x Ny x Nz x Nslice)
+%
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 [Nx, Ny, Nz, Nslice, Ncoil] = size(kdata);
 if strcmp(type, 'walsh')
     csm_option.method = 'walsh'; % coil estimation method: 'walsh', 'sos'
