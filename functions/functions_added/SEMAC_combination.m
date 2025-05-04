@@ -1,4 +1,14 @@
 function SEMAC_Recon = SEMAC_combination(SEMAC_CC_correct_slice)
+%   SEMAC combination
+%   Input:
+%       - SEMAC Spectral Bin Images: SEMAC_CC_correct_slice (Nx x Ny x Nz x Nslice)
+%
+%   Output:
+%       - SEMAC Reconstructed Images: SEMAC_Recon (Nx x Ny x Nslice)
+%
+%   Author: Bahadir Alp Barlas
+%   Email: bbarlas@usc.edu
+
 [Nx,Ny,Nz,Nslice] = size(SEMAC_CC_correct_slice);
 SEMAC_Recon = zeros(size(SEMAC_CC_correct_slice,1,2,4));
 
