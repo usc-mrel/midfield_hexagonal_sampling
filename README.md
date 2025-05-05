@@ -3,7 +3,7 @@
 This repository contains the code and datasets for
 **"Acceleration of SEMAC at 0.55T using hexagonal sampling"**, by Bahadir Alp Barlas, Kubra Keskin, Bochao Li, Brian A. Hargreaves, and Krishna S. Nayak.
 
-Bahadir Alp Barlas, University of Southern California, April 2025.
+Bahadir Alp Barlas, University of Southern California, May 2025.
 
 ## ISMRMRD datasets
 Human and phantom datasets can be found on Zenodo:
