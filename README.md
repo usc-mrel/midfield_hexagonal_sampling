@@ -7,14 +7,7 @@ Bahadir Alp Barlas, University of Southern California, April 2025.
 
 ## ISMRMRD datasets
 Human and phantom datasets can be found on Zenodo:
-
-- Phantom Hip: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-- Phantom Spine: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-- In Vivo Hip: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-- In Vivo Spine 1: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-- In Vivo Spine 2: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-- In Vivo Spine 3: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5874604.svg)](https://doi.org/10.5281/zenodo.5874604)
-  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15258101.svg)](https://doi.org/10.5281/zenodo.15258101)
 
 * **Phantom Hip**
   Folder name: hip_phantom
