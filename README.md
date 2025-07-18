@@ -5,6 +5,13 @@ This repository contains the code and datasets for
 
 Bahadir Alp Barlas, University of Southern California, May 2025.
 
+## Required Dependencies
+1. MATLAB
+2. Optimization Toolbox
+3. Signal Processing Toolbox
+4. Image Processing Toolbox
+5. Statistics and Machine Learning Toolbox
+
 ## ISMRMRD datasets
 Human and phantom datasets can be found on Zenodo:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15258101.svg)](https://doi.org/10.5281/zenodo.15258101)
@@ -44,7 +51,7 @@ Once datasets are downloaded, add the folders in the folder "MR_data".
 
 To obtain the figures in the paper, open the file "main_file.m". Choose the dataset in the section "Choose Dataset" in the code and then simply run the code to obtain the figures for the chosen dataset. The figures and their corresponding datasets are noted below.
 
- 
+Note that the source code also produces the results for GRAPPA-2 with using a 3D kernel for additional reference. 
 
 ## Figure 2 and S3 (Evaluation in a Hip-Implant Phantom)
 
@@ -98,4 +105,3 @@ In "main_file.m" and in "Choose Dataset" section in the file, comment all datase
 Uncomment the dataset "vol1106_Spine" in "Choose Dataset" section.
 
 Run "main_file.m".
-
