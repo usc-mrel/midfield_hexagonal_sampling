@@ -49,6 +49,8 @@ Human and phantom datasets can be found on Zenodo:
 
 Once datasets are downloaded, add the folders in the folder "MR_data".
 
+### FIGURES
+
 To obtain the figures in the paper, open the file "main_file.m". Choose the dataset in the section "Choose Dataset" in the code and then simply run the code to obtain the figures for the chosen dataset. The figures and their corresponding datasets are noted below.
 
 Note that the source code also produces the results for GRAPPA-2 with using a 3D kernel for additional reference. 
@@ -75,7 +77,7 @@ Run "main_file.m".
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "Invivo_hip".
 
-Uncomment the dataset "Invivo_hip" in "Choose Dataset" section.
+Uncomment the dataset "invivo_hip" in "Choose Dataset" section.
 
 Run "main_file.m".
 
