@@ -49,13 +49,13 @@ Human and phantom datasets can be found on Zenodo:
 
 Once datasets are downloaded, add the folders in the folder "MR_data".
 
-# FIGURES
+## FIGURES
 
 To obtain the figures in the paper, open the file "main_file.m". Choose the dataset in the section "Choose Dataset" in the code and then simply run the code to obtain the figures for the chosen dataset. The figures and their corresponding datasets are noted below.
 
 Note that the source code also produces the results for GRAPPA-2 with using a 3D kernel for additional reference. 
 
-## Figure 2 and S3 (Evaluation in a Hip-Implant Phantom)
+# Figure 2 and S3 (Evaluation in a Hip-Implant Phantom)
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "hip_phantom".
 
@@ -64,7 +64,7 @@ Uncomment the dataset "hip_phantom" in "Choose Dataset" section.
 Run "main_file.m".
 
 
-## Figure 3 and S2 (Evaluation in a Spine-Implant Phantom)
+# Figure 3 and S2 (Evaluation in a Spine-Implant Phantom)
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "spine_phantom".
 
@@ -73,7 +73,7 @@ Uncomment the dataset "spine_phantom" in "Choose Dataset" section.
 Run "main_file.m".
 
 
-## Figure 4 and S4 (In vivo evaluation in a patient with Total Hip Replacement)
+# Figure 4 and S4 (In vivo evaluation in a patient with Total Hip Replacement)
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "Invivo_hip".
 
@@ -82,7 +82,7 @@ Uncomment the dataset "invivo_hip" in "Choose Dataset" section.
 Run "main_file.m".
 
 
-## Figure 5 and S5 (In vivo evaluation in a patient with Transforaminal Lumbar Interbody Fusion)
+# Figure 5 and S5 (In vivo evaluation in a patient with Transforaminal Lumbar Interbody Fusion)
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "vol0958_Spine".
 
@@ -91,7 +91,7 @@ Uncomment the dataset "vol0958_Spine" in "Choose Dataset" section.
 Run "main_file.m".
 
 
-## Figure S6 and S7 (In vivo evaluation in a patient with anterior lumbar interbody fusion)
+# Figure S6 and S7 (In vivo evaluation in a patient with anterior lumbar interbody fusion)
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "vol1095_Spine".
 
@@ -100,7 +100,7 @@ Uncomment the dataset "vol1095_Spine" in "Choose Dataset" section.
 Run "main_file.m".
 
 
-## Figure S8 and S9 (In vivo evaluation in a patient with transforaminal lumbar interbody fusion)
+# Figure S8 and S9 (In vivo evaluation in a patient with transforaminal lumbar interbody fusion)
 
 In "main_file.m" and in "Choose Dataset" section in the file, comment all datasets except "vol1106_Spine".
 
