@@ -49,7 +49,7 @@ Human and phantom datasets can be found on Zenodo:
 
 Once datasets are downloaded, add the folders in the folder "MR_data".
 
-### FIGURES
+# FIGURES
 
 To obtain the figures in the paper, open the file "main_file.m". Choose the dataset in the section "Choose Dataset" in the code and then simply run the code to obtain the figures for the chosen dataset. The figures and their corresponding datasets are noted below.
 
