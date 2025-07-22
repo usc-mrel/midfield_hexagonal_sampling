@@ -229,7 +229,7 @@ fprintf('Starting GRAPPA Recon:\n')
 kdata_GRAPPA = zeros(Nx,Ny,Nz,Ncoil,Nslice);
 zero_sp_idx = Nz/2 + 1; % zero spectral dimension index
 kernal_size = [5,5]; % kernal size
-parfor ns = 1:Nslice
+for ns = 1:Nslice
     kdata_2dcoils = squeeze(kdata(:,:,:,ns,:));
     kcalib = squeeze(kdata(:, info{1}.calib_idx, zero_sp_idx, ns, :));
     kdata_GRAPPA(:, :, :, :, ns) = GRAPPA_spe(kdata_2dcoils, kcalib, kernal_size, lambda);
@@ -248,7 +248,7 @@ clear kdata_GRAPPA;
 %% GRAPPA 3D Recon
 GRAPPA_start = tic;
 kdata_GRAPPA_3D = zeros(size(kdata));
-parfor ns=1:Nslice
+for ns=1:Nslice
     MCalib = squeeze(kdata(:, info{1}.calib_idx, :, ns, :));
     MCalib = correct_MCalib(MCalib);
     kernel = GRAPPA_3D_calibrate(MCalib,kernel_matrix_3D,lambda);
@@ -274,7 +274,7 @@ fprintf('Hex sampling total time: %2.f seconds \n', toc(hex_start));
 %% GRAPPA-2 Hex Recon
 GRAPPA_start = tic;
 kdata_GRAPPA_Hex = zeros(size(kdata_hex));
-parfor(ns=1:Nslice,round(Nslice))
+for ns=1:Nslice
     MCalib = squeeze(kdata_hex(:, info{1}.calib_idx, :, ns, :));
     MCalib = correct_MCalib(MCalib);
     kernel = GRAPPA_Hex_calibrate(MCalib,kernel_matrix_hex,lambda);
